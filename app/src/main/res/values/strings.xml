@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">QuizApp</string>
+    <string name="quiz_instructions_header">Quiz Instructions:</string>
+    <string name="quiz_instructions_text">After you have provide dall answers, click the "Submit" button to get your quiz results</string>
+    <string name="question_1_text">What keyword is used to declare a variable of type integer in Java?</string>
 </resources>
