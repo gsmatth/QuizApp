@@ -63,6 +63,26 @@
             android:layout_height="wrap_content"
             android:text=""
             android:hint="type answer here"/>
+        <TextView
+            android:id="@+id/question_4_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_4_text" />
+        <CheckBox
+            android:id="@+id/question_4_box_one"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/question_4_box_one_text"/>
+        <CheckBox
+            android:id="@+id/question_4_box_two"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/question_4_box_two_text"/>
+        <CheckBox
+            android:id="@+id/question_4_box_three"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/question_4_box_three_text"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"

@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,7 +26,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void scoreQuiz(View view) {
+        scoreTextQuestions(view);
+        scoreCheckboxQuestions(view);
 
+        float quizScoreInPercent = (quantityOfCorrectAnswers / 8.00f) * 100;
+
+        if (quizScoreInPercent >= 75) {
+            Toast.makeText(this, "You have passed the quiz, with a score of " + quizScoreInPercent + "%", Toast.LENGTH_SHORT).show();
+            quantityOfCorrectAnswers = 0;
+            return;
+
+        } else {
+            Toast.makeText(this, "You have not passed the quiz, your score is " + quizScoreInPercent + "%", Toast.LENGTH_SHORT).show();
+            quantityOfCorrectAnswers = 0;
+            return;
+        }
+    }
+
+    private void scoreTextQuestions(View view) {
         EditText textAnswerObject = (EditText) findViewById(R.id.question_1_answer);
         String textAnswerString = textAnswerObject.getText().toString();
         if (textAnswerString.equals(correctAnswerText[0])) {
@@ -46,15 +64,13 @@ public class MainActivity extends AppCompatActivity {
             Log.i("mainActivity", "value of correctAnswers: " + quantityOfCorrectAnswers);
         }
 
-        float quizScoreInPercent = (quantityOfCorrectAnswers / 8.00f) * 100;
+    }
 
-        if (quizScoreInPercent >= 75) {
-            Toast.makeText(this, "You have passed the quiz, with a score of " + quizScoreInPercent + "%", Toast.LENGTH_SHORT).show();
-            return;
-
-        } else {
-            Toast.makeText(this, "You have not passed the quiz, your score is " + quizScoreInPercent + "%", Toast.LENGTH_SHORT).show();
-            return;
+    private void scoreCheckboxQuestions(View view){
+        boolean hasClass = ((CheckBox) findViewById(R.id.question_4_box_one)).isChecked();
+        if(hasClass){
+            quantityOfCorrectAnswers += 1;
         }
+
     }
 }

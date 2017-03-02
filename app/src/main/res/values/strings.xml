@@ -5,4 +5,8 @@
     <string name="question_1_text">1.  What keyword is used to declare a variable of type integer in Java?</string>
     <string name="question_2_text">2.  What type of primitive has a value of either true or false?</string>
     <string name="question_3_text">3.  What keyword do you use to declare a variable containing text?</string>
+    <string name="question_4_text">4.  Select all items that are primitive data types?</string>
+    <string name="question_4_box_one_text">class</string>
+    <string name="question_4_box_two_text">int</string>
+    <string name="question_4_box_three_text">Array</string>
 </resources>
