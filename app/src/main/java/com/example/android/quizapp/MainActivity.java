@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import static android.R.attr.value;
 
@@ -17,22 +18,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     String[] correctAnswerText = {
-      "variable", "String", "int"
+            "int", "boolean", "String"
     };
 
     int quantityOfCorrectAnswers = 0;
 
 
-    public void scoreQuiz(View view){
+    public void scoreQuiz(View view) {
+        
         EditText textAnswerObject = (EditText) findViewById(R.id.question_1_answer);
         String textAnswerString = textAnswerObject.getText().toString();
-
-        if(textAnswerString.equals(correctAnswerText[0])){
+        if (textAnswerString.equals(correctAnswerText[0])) {
             quantityOfCorrectAnswers += 1;
             Log.i("mainActivity", "value of correctAnswers: " + quantityOfCorrectAnswers);
         }
+        double quizScoreInPercent = (quantityOfCorrectAnswers / 8.00) * 100;
 
+        if (quizScoreInPercent >= 75) {
+            Toast.makeText(this, "You have passed the quiz, with a score of " + quizScoreInPercent + "%", Toast.LENGTH_SHORT).show();
+            return;
+
+        } else {
+            Toast.makeText(this, "You have not passed the quiz, your score is " + quizScoreInPercent + "%", Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
-
-
 }
