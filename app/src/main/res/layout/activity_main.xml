@@ -19,19 +19,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="24dp"
             android:text="@string/quiz_instructions_header" />
 
         <TextView
             android:id="@+id/quiz_instructions_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/quiz_instructions_text" />
+            android:text="@string/quiz_instructions_text"
+            android:layout_marginBottom="24dp"
+            style="@style/QuestionText"/>
 
         <TextView
             android:id="@+id/question_1_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/question_1_text" />
+            android:text="@string/question_1_text"
+            style="@style/QuestionText"/>
 
         <EditText
             android:id="@+id/question_1_answer"
@@ -41,9 +41,8 @@
             android:hint="type answer here"/>
         <TextView
             android:id="@+id/question_2_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/question_2_text" />
+            android:text="@string/question_2_text"
+            style="@style/QuestionText"/>
 
         <EditText
             android:id="@+id/question_2_answer"
@@ -53,9 +52,8 @@
             android:hint="type answer here"/>
         <TextView
             android:id="@+id/question_3_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/question_3_text" />
+            android:text="@string/question_3_text"
+            style="@style/QuestionText"/>
 
         <EditText
             android:id="@+id/question_3_answer"
@@ -65,44 +63,37 @@
             android:hint="type answer here"/>
         <TextView
             android:id="@+id/question_4_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/question_4_text" />
+            android:text="@string/question_4_text"
+            style="@style/QuestionText"/>
         <CheckBox
             android:id="@+id/question_4_box_one"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/question_4_box_one_text"/>
+            android:text="@string/question_4_box_one_text"
+            style="@style/BasicCheckBoxStyle"/>
         <CheckBox
             android:id="@+id/question_4_box_two"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/question_4_box_two_text"/>
+            android:text="@string/question_4_box_two_text"
+            style="@style/BasicCheckBoxStyle"/>
         <CheckBox
             android:id="@+id/question_4_box_three"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/question_4_box_three_text"/>
+            android:text="@string/question_4_box_three_text"
+            style="@style/BasicCheckBoxStyle"/>
         <TextView
             android:id="@+id/question_5_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/question_5_text" />
+            android:text="@string/question_5_text"
+            style="@style/QuestionText"
+            />
         <CheckBox
             android:id="@+id/question_5_box_one"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/question_5_box_one_text"/>
+            android:text="@string/question_5_box_one_text"
+            style="@style/BasicCheckBoxStyle"/>
         <CheckBox
             android:id="@+id/question_5_box_two"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/question_5_box_two_text"/>
+            android:text="@string/question_5_box_two_text"
+            style="@style/BasicCheckBoxStyle"/>
         <CheckBox
             android:id="@+id/question_5_box_three"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/question_5_box_three_text"/>
+            android:text="@string/question_5_box_three_text"
+            style="@style/BasicCheckBoxStyle"/>
         <RadioGroup
             android:id="@+id/question_6_radio_group"
             android:layout_width="match_parent"
@@ -110,9 +101,8 @@
             android:orientation="vertical"
             >
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question_6_text"/>
+                android:text="@string/question_6_text"
+                style="@style/QuestionText"/>
             <RadioButton
                 android:id="@+id/question_6_radio_button_one"
                 android:layout_width="match_parent"
@@ -136,17 +126,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="32dp">
 
             <Button
-                android:layout_width="100dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="65dp"
                 android:text="Submit"
                 android:onClick="scoreQuiz"
+                android:layout_marginRight="50dp"
                 />
 
             <Button
-                android:layout_width="100dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="65dp"
                 android:text="Reset"/>
 
