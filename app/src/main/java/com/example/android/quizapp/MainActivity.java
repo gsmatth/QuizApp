@@ -68,7 +68,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void scoreCheckboxQuestions(View view){
         boolean hasClass = ((CheckBox) findViewById(R.id.question_4_box_one)).isChecked();
-        if(hasClass){
+        boolean hasInt = ((CheckBox) findViewById(R.id.question_4_box_two)).isChecked();
+        boolean hasArray = ((CheckBox) findViewById(R.id.question_4_box_three)).isChecked();
+        if(hasInt && !hasClass && !hasArray){
+            quantityOfCorrectAnswers += 1;
+        }
+
+        boolean hasIfThen = ((CheckBox) findViewById(R.id.question_5_box_one)).isChecked();
+        boolean hasWhile = ((CheckBox) findViewById(R.id.question_5_box_two)).isChecked();
+        boolean hasWhileElse = ((CheckBox) findViewById(R.id.question_5_box_three)).isChecked();
+        if(hasIfThen && hasWhile && !hasWhileElse){
             quantityOfCorrectAnswers += 1;
         }
 
