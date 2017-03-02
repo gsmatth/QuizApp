@@ -83,8 +83,6 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:text="@string/question_4_box_three_text"/>
-
-
         <TextView
             android:id="@+id/question_5_text"
             android:layout_width="match_parent"
@@ -105,6 +103,36 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:text="@string/question_5_box_three_text"/>
+        <RadioGroup
+            android:id="@+id/question_6_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_6_text"/>
+            <RadioButton
+                android:id="@+id/question_6_radio_button_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_6_radio_button_one_text"
+                />
+            <RadioButton
+                android:id="@+id/question_6_radio_button_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_6_radio_button_two_text"
+                />
+            <RadioButton
+                android:id="@+id/question_6_radio_button_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_6_radio_button_three_text"
+                />
+        </RadioGroup>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"

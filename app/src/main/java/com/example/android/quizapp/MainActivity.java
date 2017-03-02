@@ -6,9 +6,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
+import static android.R.attr.checked;
 import static android.R.attr.value;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,16 +29,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void scoreQuiz(View view) {
-        scoreTextQuestions(view);
-        scoreCheckboxQuestions(view);
+        scoreTextQuestions();
+        scoreCheckboxQuestions();
+        scoreRadioButtonQuestions();
 
-        float quizScoreInPercent = (quantityOfCorrectAnswers / 8.00f) * 100;
+        float quizScoreInPercent = (quantityOfCorrectAnswers / 6.00f) * 100;
 
         if (quizScoreInPercent >= 75) {
             Toast.makeText(this, "You have passed the quiz, with a score of " + quizScoreInPercent + "%", Toast.LENGTH_SHORT).show();
             quantityOfCorrectAnswers = 0;
             return;
-
         } else {
             Toast.makeText(this, "You have not passed the quiz, your score is " + quizScoreInPercent + "%", Toast.LENGTH_SHORT).show();
             quantityOfCorrectAnswers = 0;
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void scoreTextQuestions(View view) {
+    private void scoreTextQuestions() {
         EditText textAnswerObject = (EditText) findViewById(R.id.question_1_answer);
         String textAnswerString = textAnswerObject.getText().toString();
         if (textAnswerString.equals(correctAnswerText[0])) {
@@ -66,20 +69,26 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void scoreCheckboxQuestions(View view){
+    private void scoreCheckboxQuestions() {
         boolean hasClass = ((CheckBox) findViewById(R.id.question_4_box_one)).isChecked();
         boolean hasInt = ((CheckBox) findViewById(R.id.question_4_box_two)).isChecked();
         boolean hasArray = ((CheckBox) findViewById(R.id.question_4_box_three)).isChecked();
-        if(hasInt && !hasClass && !hasArray){
+        if (hasInt && !hasClass && !hasArray) {
             quantityOfCorrectAnswers += 1;
         }
 
         boolean hasIfThen = ((CheckBox) findViewById(R.id.question_5_box_one)).isChecked();
         boolean hasWhile = ((CheckBox) findViewById(R.id.question_5_box_two)).isChecked();
         boolean hasWhileElse = ((CheckBox) findViewById(R.id.question_5_box_three)).isChecked();
-        if(hasIfThen && hasWhile && !hasWhileElse){
+        if (hasIfThen && hasWhile && !hasWhileElse) {
             quantityOfCorrectAnswers += 1;
         }
 
+    }
+
+    private void scoreRadioButtonQuestions() {
+        boolean hasClass1 = ((RadioButton) findViewById(R.id.question_6_radio_button_one)).isChecked();
+
+        if(hasClass1) quantityOfCorrectAnswers += 1;
     }
 }

@@ -13,4 +13,8 @@
     <string name="question_5_box_one_text">if then</string>
     <string name="question_5_box_two_text">while</string>
     <string name="question_5_box_three_text">while else</string>
+    <string name="question_6_text">6.  The Google Material Design Guide recommends what numbers level for primary colors </string>
+    <string name="question_6_radio_button_one_text">500</string>
+    <string name="question_6_radio_button_two_text">700</string>
+    <string name="question_6_radio_button_three_text">900</string>
 </resources>
