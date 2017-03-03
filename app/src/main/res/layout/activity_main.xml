@@ -4,147 +4,159 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         tools:context="com.example.android.quizapp.MainActivity">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:text="@string/quiz_instructions_header" />
+            android:text="@string/quiz_instructions_header"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/quiz_instructions_text"
-            android:text="@string/quiz_instructions_text"
+            style="@style/QuestionText"
             android:layout_marginBottom="24dp"
-            style="@style/QuestionText"/>
+            android:text="@string/quiz_instructions_text" />
 
         <TextView
             android:id="@+id/question_1_text"
-            android:text="@string/question_1_text"
-            style="@style/QuestionText"/>
+            style="@style/QuestionText"
+            android:text="@string/question_1_text" />
 
         <EditText
             android:id="@+id/question_1_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:hint="type answer here"/>
+            android:hint="type answer here"
+            android:text="" />
+
         <TextView
             android:id="@+id/question_2_text"
-            android:text="@string/question_2_text"
-            style="@style/QuestionText"/>
+            style="@style/QuestionText"
+            android:text="@string/question_2_text" />
 
         <EditText
             android:id="@+id/question_2_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:hint="type answer here"/>
+            android:hint="type answer here"
+            android:text="" />
+
         <TextView
             android:id="@+id/question_3_text"
-            android:text="@string/question_3_text"
-            style="@style/QuestionText"/>
+            style="@style/QuestionText"
+            android:text="@string/question_3_text" />
 
         <EditText
             android:id="@+id/question_3_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:hint="type answer here"/>
+            android:hint="type answer here"
+            android:text="" />
+
         <TextView
             android:id="@+id/question_4_text"
-            android:text="@string/question_4_text"
-            style="@style/QuestionText"/>
+            style="@style/QuestionText"
+            android:text="@string/question_4_text" />
+
         <CheckBox
             android:id="@+id/question_4_box_one"
-            android:text="@string/question_4_box_one_text"
-            style="@style/BasicCheckBoxStyle"/>
+            style="@style/BasicCheckBoxStyle"
+            android:text="@string/question_4_box_one_text" />
+
         <CheckBox
             android:id="@+id/question_4_box_two"
-            android:text="@string/question_4_box_two_text"
-            style="@style/BasicCheckBoxStyle"/>
+            style="@style/BasicCheckBoxStyle"
+            android:text="@string/question_4_box_two_text" />
+
         <CheckBox
             android:id="@+id/question_4_box_three"
-            android:text="@string/question_4_box_three_text"
-            style="@style/BasicCheckBoxStyle"/>
+            style="@style/BasicCheckBoxStyle"
+            android:text="@string/question_4_box_three_text" />
+
         <TextView
             android:id="@+id/question_5_text"
-            android:text="@string/question_5_text"
             style="@style/QuestionText"
-            />
+            android:text="@string/question_5_text" />
+
         <CheckBox
             android:id="@+id/question_5_box_one"
-            android:text="@string/question_5_box_one_text"
-            style="@style/BasicCheckBoxStyle"/>
+            style="@style/BasicCheckBoxStyle"
+            android:text="@string/question_5_box_one_text" />
+
         <CheckBox
             android:id="@+id/question_5_box_two"
-            android:text="@string/question_5_box_two_text"
-            style="@style/BasicCheckBoxStyle"/>
+            style="@style/BasicCheckBoxStyle"
+            android:text="@string/question_5_box_two_text" />
+
         <CheckBox
             android:id="@+id/question_5_box_three"
-            android:text="@string/question_5_box_three_text"
-            style="@style/BasicCheckBoxStyle"/>
+            style="@style/BasicCheckBoxStyle"
+            android:text="@string/question_5_box_three_text" />
+
         <RadioGroup
             android:id="@+id/question_6_radio_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <TextView
-                android:text="@string/question_6_text"
-                style="@style/QuestionText"/>
+                style="@style/QuestionText"
+                android:text="@string/question_6_text" />
+
             <RadioButton
                 android:id="@+id/question_6_radio_button_one"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_6_radio_button_one_text"
-                />
+                android:layout_marginLeft="18dp"
+                android:text="@string/question_6_radio_button_one_text" />
+
             <RadioButton
                 android:id="@+id/question_6_radio_button_two"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_6_radio_button_two_text"
-                />
+                android:layout_marginLeft="18dp"
+                android:text="@string/question_6_radio_button_two_text" />
+
             <RadioButton
                 android:id="@+id/question_6_radio_button_three"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_6_radio_button_three_text"
-                />
+                android:layout_marginLeft="18dp"
+                android:text="@string/question_6_radio_button_three_text" />
         </RadioGroup>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:orientation="horizontal"
-            android:layout_marginTop="32dp">
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
 
             <Button
-                android:layout_weight="1"
                 android:layout_width="120dp"
                 android:layout_height="65dp"
-                android:text="Submit"
+                android:layout_marginRight="64dp"
+                android:layout_weight="1"
                 android:onClick="scoreQuiz"
-                android:layout_marginRight="50dp"
-
-                />
+                android:text="Submit" />
 
             <Button
-                android:layout_weight="1"
                 android:layout_width="120dp"
                 android:layout_height="65dp"
-                android:text="Reset"
-                android:onClick="resetQuiz"/>
+                android:layout_weight="1"
+                android:onClick="resetQuiz"
+                android:text="Reset" />
 
         </LinearLayout>
     </LinearLayout>
