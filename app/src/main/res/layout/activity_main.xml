@@ -15,6 +15,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:focusable="true"
         android:focusableInTouchMode="true"
+        android:windowSoftInputMode="stateHidden"
         tools:context="com.example.android.quizapp.MainActivity">
 
         <TextView
