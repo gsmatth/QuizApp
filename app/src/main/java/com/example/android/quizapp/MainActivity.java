@@ -67,24 +67,23 @@ public class MainActivity extends AppCompatActivity {
                 "int", "boolean", "String"
         };
 
-        EditText textAnswerObject = (EditText) findViewById(R.id.question_1_answer);
+        int [] ids = {
+                R.id.question_1_answer,
+                R.id.question_2_answer,
+                R.id.question_3_answer
+        };
+
+        for(int i = 0; i < ids.length; i++){
+            checkAnswer(ids[i], correctAnswerText[i]);
+        }
+    }
+
+    private void checkAnswer(int id, String expectedAnswer){
+        EditText textAnswerObject = (EditText) findViewById(id);
         String textAnswerString = textAnswerObject.getText().toString();
-        if (textAnswerString.equals(correctAnswerText[0])) {
+        if (textAnswerString.equals(expectedAnswer)) {
             quantityOfCorrectAnswers += 1;
         }
-
-        EditText textAnswerTwoObject = (EditText) findViewById(R.id.question_2_answer);
-        String textAnswerTwoString = textAnswerTwoObject.getText().toString();
-        if (textAnswerTwoString.equals(correctAnswerText[1])) {
-            quantityOfCorrectAnswers += 1;
-        }
-
-        EditText textAnswerThreeObject = (EditText) findViewById(R.id.question_3_answer);
-        String textAnswerThreeString = textAnswerThreeObject.getText().toString();
-        if (textAnswerThreeString.equals(correctAnswerText[2])) {
-            quantityOfCorrectAnswers += 1;
-        }
-
     }
 
     /**
